@@ -11,22 +11,18 @@ if (isset($_GET['id'])) {
     mysqli_stmt_execute($stmt_signup);
     mysqli_stmt_close($stmt_signup);
 
-    // Use prepared statement to delete from contactus table
-    $query_contactus = "DELETE FROM contactus WHERE id = ?";
-    $stmt_contactus = mysqli_prepare($con, $query_contactus);
-    mysqli_stmt_bind_param($stmt_contactus, "i", $userId);
-    mysqli_stmt_execute($stmt_contactus);
-    mysqli_stmt_close($stmt_contactus);
-
-    // Use prepared statement to delete from staffs table
-    $query_staffs = "DELETE FROM staffs WHERE id = ?";
-    $stmt_staffs = mysqli_prepare($con, $query_staffs);
-    mysqli_stmt_bind_param($stmt_staffs, "i", $userId);
-    mysqli_stmt_execute($stmt_staffs);
-    mysqli_stmt_close($stmt_staffs);
+    // Use prepared statement to delete from reservation table
+    $query_reservation = "DELETE FROM reservation WHERE id = ?";
+    $stmt_reservation = mysqli_prepare($con, $query_reservation);
+    mysqli_stmt_bind_param($stmt_reservation, "i", $userId);
+    mysqli_stmt_execute($stmt_reservation);
+    mysqli_stmt_close($stmt_reservation);
 
     // Redirect after deletion
-    echo "<script>alert('Data deleted successfully.'); window.location.href = 'admindash.php';</script>";
+    echo "<script>alert('User Data deleted successfully.'); window.location.href = 'admindash.php';</script>";
+    exit();
+}
+else {
     exit();
 }
 

@@ -1,0 +1,344 @@
+<!-- Rooms Validation -->
+<script>
+    // Define room types and their corresponding prices
+    const roomTypes = {
+        Single: "₹1,800",
+        Double: "₹2,200",
+        Triple: "₹4,400",
+        Quad: "₹6,000",
+        Family: "₹8,500",
+        King: "₹2,400",
+        Queen: "₹2,600",
+        Guest: "₹9,700"
+    };
+
+    // Function to show popup and set default values based on room type
+    function openPopup(roomType, roomPrice) {
+        // Set default room type and price
+        document.getElementById('roomType').value = roomType;
+        document.getElementById('roomPrice').value = roomPrice;
+
+        // Disable room type and room price fields
+        document.getElementById('roomType').disabled = true;
+        document.getElementById('roomPrice').disabled = true;
+
+        // Show or hide fields based on room type
+        if (roomType === 'Single') {
+            document.getElementById('ad').style.display = 'none';
+            document.getElementById('child').style.display = 'none';
+            document.getElementById('adults').style.display = 'none';
+            document.getElementById('children').style.display = 'none';
+            // Remove the required attribute from the hidden fields
+            document.getElementById('adults').removeAttribute('required');
+            document.getElementById('children').removeAttribute('required');
+        } else {
+            document.getElementById('ad').style.display = 'block';
+            document.getElementById('child').style.display = 'block';
+            document.getElementById('adults').style.display = 'block';
+            document.getElementById('children').style.display = 'block';
+            // Add the required attribute to the visible fields
+            document.getElementById('adults').setAttribute('required', 'required');
+            document.getElementById('children').setAttribute('required', 'required');
+        }
+
+        // Show popup
+        document.getElementById('popups').classList.remove('hidden');
+    }
+
+    // Attach event listeners to each "Book now" button
+    document.addEventListener('DOMContentLoaded', function() {
+        const roomButtons = document.querySelectorAll('.book-now-button');
+        roomButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const roomType = this.dataset.roomType;
+                const roomPrice = roomTypes[roomType];
+                openPopup(roomType, roomPrice);
+            });
+        });
+
+        // Close popup
+        var closePopupButton = document.getElementById('close-popup');
+        var popups = document.getElementById('popups');
+        closePopupButton.addEventListener('click', function() {
+            popups.classList.add('hidden');
+        });
+
+        // Handle form submission
+        document.getElementById('reservation-form').addEventListener('submit', function(event) {
+            // Re-enable room type and room price fields before form submission
+            document.getElementById('roomType').disabled = false;
+            document.getElementById('roomPrice').disabled = false;
+        });
+    });
+</script>
+
+<!-- Double Room Validation -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const roomTypeSelect = document.getElementById('roomType');
+        const adultsSelect = document.getElementById('adults');
+        const childrenSelect = document.getElementById('children');
+
+        // Function to set default options for adults and children select tags
+        function setDefaultOptions() {
+            // Show only options 1 and 2 for adults
+            document.getElementById('option1').style.display = 'block';
+            document.getElementById('option2').style.display = 'block';
+            document.getElementById('option3').style.display = 'none';
+            document.getElementById('option4').style.display = 'none';
+            document.getElementById('option5').style.display = 'none';
+
+            // Show only option 1 for children
+            document.getElementById('option-1').style.display = 'block';
+            document.getElementById('option-2').style.display = 'none';
+            document.getElementById('option-3').style.display = 'none';
+            document.getElementById('option-4').style.display = 'none';
+            document.getElementById('option-5').style.display = 'none';
+            document.getElementById('children').removeAttribute('required');
+        }
+
+        // Set default options when room type changes to "Double"
+        roomTypeSelect.addEventListener('change', function() {
+            const selectedRoomType = roomTypeSelect.value;
+            if (selectedRoomType === 'Double') {
+                setDefaultOptions();
+            }
+        });
+
+        // Set default options when the page loads
+        setDefaultOptions();
+
+
+        adultsSelect.addEventListener('change', function() {
+            const selectedRoomType = roomTypeSelect.value;
+            if (selectedRoomType === 'Double' && adultsSelect.value === '2') {
+                // Clear the value of children select tag
+                childrenSelect.value = '';
+                childrenSelect.style.display = 'none';
+                document.getElementById('child').style.display = 'none';
+                document.getElementById('children').removeAttribute('required');
+            }
+            if (selectedRoomType === 'Double' && adultsSelect.value === '2') {
+                document.getElementById('option1').style.display = 'block';
+                document.getElementById('option2').style.display = 'block';
+
+                document.getElementById('option3').style.display = 'none';
+                document.getElementById('option4').style.display = 'none';
+                document.getElementById('option5').style.display = 'none';
+
+                childrenSelect.style.display = 'none';
+                document.getElementById('child').style.display = 'none';
+                document.getElementById('children').removeAttribute('required');
+            }
+            if (selectedRoomType === 'Double' && adultsSelect.value === '1') {
+                childrenSelect.style.display = 'block';
+                document.getElementById('option-1').style.display = 'block';
+                document.getElementById('child').style.display = 'block';
+                document.getElementById('children').setAttribute('required', 'required');
+
+                document.getElementById('option-2').style.display = 'none';
+                document.getElementById('option-3').style.display = 'none';
+                document.getElementById('option-4').style.display = 'none';
+                document.getElementById('option-5').style.display = 'none';
+            }
+        });
+
+    });
+</script>
+
+<!-- Triple Room Validation -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const roomTypeSelect = document.getElementById('roomType');
+        const adultsSelect = document.getElementById('adults');
+        const childrenSelect = document.getElementById('children');
+
+        // Function to set default options for adults and children select tags
+        function setDefaultOptions() {
+            document.getElementById('option1').style.display = 'block';
+            document.getElementById('option2').style.display = 'block';
+            document.getElementById('option3').style.display = 'block';
+            document.getElementById('option4').style.display = 'none';
+            document.getElementById('option5').style.display = 'none';
+
+            document.getElementById('option-1').style.display = 'block';
+            document.getElementById('option-2').style.display = 'none';
+            document.getElementById('option-3').style.display = 'none';
+            document.getElementById('option-4').style.display = 'none';
+            document.getElementById('option-5').style.display = 'none';
+            document.getElementById('children').removeAttribute('required');
+        }
+
+        // Set default options when room type changes to "Triple"
+        roomTypeSelect.addEventListener('change', function() {
+            const selectedRoomType = roomTypeSelect.value;
+            if (selectedRoomType === 'Triple') {
+                setDefaultOptions();
+            }
+        });
+
+        // Set default options when the page loads
+        setDefaultOptions();
+        adultsSelect.addEventListener('change', function() {
+            const selectedRoomType = roomTypeSelect.value;
+            if (selectedRoomType === 'Triple' && adultsSelect.value === '3') {
+                // Clear the value of children select tag
+                childrenSelect.value = '';
+                childrenSelect.style.display = 'none';
+                document.getElementById('child').style.display = 'none';
+                document.getElementById('children').removeAttribute('required');
+            }
+
+            if (selectedRoomType === 'Triple' && adultsSelect.value === '3') {
+                document.getElementById('option1').style.display = 'block';
+                document.getElementById('option2').style.display = 'block';
+                document.getElementById('option3').style.display = 'block';
+                document.getElementById('option4').style.display = 'none';
+                document.getElementById('option5').style.display = 'none';
+                childrenSelect.style.display = 'none';
+                document.getElementById('child').style.display = 'none';
+                document.getElementById('children').removeAttribute('required');
+            }
+
+            if (selectedRoomType === 'Triple' && adultsSelect.value === '2') {
+                document.getElementById('option1').style.display = 'block';
+                document.getElementById('option2').style.display = 'block';
+                document.getElementById('option3').style.display = 'block';
+                document.getElementById('option4').style.display = 'none';
+                document.getElementById('option5').style.display = 'none';
+                childrenSelect.style.display = 'block';
+                document.getElementById('child').style.display = 'block';
+                document.getElementById('option-1').style.display = 'block';
+                document.getElementById('children').setAttribute('required', 'required');
+                document.getElementById('option-2').style.display = 'none';
+                document.getElementById('option-3').style.display = 'none';
+                document.getElementById('option-4').style.display = 'none';
+                document.getElementById('option-5').style.display = 'none';
+            }
+
+            if (selectedRoomType === 'Triple' && adultsSelect.value === '1') {
+                document.getElementById('option1').style.display = 'block';
+                document.getElementById('option2').style.display = 'block';
+                document.getElementById('option3').style.display = 'block';
+                document.getElementById('option4').style.display = 'none';
+                document.getElementById('option5').style.display = 'none';
+                childrenSelect.style.display = 'block';
+                document.getElementById('child').style.display = 'block';
+                document.getElementById('option-1').style.display = 'block';
+                document.getElementById('option-2').style.display = 'block';
+                document.getElementById('children').setAttribute('required', 'required');
+                document.getElementById('option-3').style.display = 'none';
+                document.getElementById('option-4').style.display = 'none';
+                document.getElementById('option-5').style.display = 'none';
+            }
+        });
+    });
+</script>
+
+<!-- Quad Room Validation -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const roomTypeSelect = document.getElementById('roomType');
+        const adultsSelect = document.getElementById('adults');
+        const childrenSelect = document.getElementById('children');
+
+        // Function to set default options for adults and children select tags
+        function setDefaultOptions() {
+            document.getElementById('option1').style.display = 'block';
+            document.getElementById('option2').style.display = 'block';
+            document.getElementById('option3').style.display = 'block';
+            document.getElementById('option4').style.display = 'block';
+            document.getElementById('option5').style.display = 'none';
+
+            document.getElementById('option-1').style.display = 'block';
+            document.getElementById('option-2').style.display = 'none';
+            document.getElementById('option-3').style.display = 'none';
+            document.getElementById('option-4').style.display = 'none';
+            document.getElementById('option-5').style.display = 'none';
+            document.getElementById('children').removeAttribute('required');
+        }
+
+        // Set default options when room type changes to "Quad"
+        roomTypeSelect.addEventListener('change', function() {
+            const selectedRoomType = roomTypeSelect.value;
+            if (selectedRoomType === 'Quad') {
+                setDefaultOptions();
+            }
+        });
+
+        // Set default options when the page loads
+        setDefaultOptions();
+        adultsSelect.addEventListener('change', function() {
+            const selectedRoomType = roomTypeSelect.value;
+            if (selectedRoomType === 'Quad') {
+                if (adultsSelect.value === '4') {
+                    // Clear the value of children select tag
+                    childrenSelect.value = '';
+                    childrenSelect.style.display = 'none';
+                    document.getElementById('child').style.display = 'none';
+                    document.getElementById('children').removeAttribute('required');
+                }
+
+                if (selectedRoomType === 'Quad' && adultsSelect.value === '4') {
+                    document.getElementById('option1').style.display = 'block';
+                    document.getElementById('option2').style.display = 'block';
+                    document.getElementById('option3').style.display = 'block';
+                    document.getElementById('option4').style.display = 'block';
+                    document.getElementById('option5').style.display = 'none';
+                    childrenSelect.style.display = 'none';
+                    document.getElementById('child').style.display = 'none';
+                    document.getElementById('children').removeAttribute('required');
+                }
+
+                if (selectedRoomType === 'Quad' && adultsSelect.value === '3') {
+                    document.getElementById('option1').style.display = 'block';
+                    document.getElementById('option2').style.display = 'block';
+                    document.getElementById('option3').style.display = 'block';
+                    document.getElementById('option4').style.display = 'block';
+                    document.getElementById('option5').style.display = 'none';
+                    childrenSelect.style.display = 'block';
+                    document.getElementById('child').style.display = 'block';
+                    document.getElementById('option-1').style.display = 'block';
+                    document.getElementById('children').setAttribute('required', 'required');
+                    document.getElementById('option-2').style.display = 'none';
+                    document.getElementById('option-3').style.display = 'none';
+                    document.getElementById('option-4').style.display = 'none';
+                    document.getElementById('option-5').style.display = 'none';
+                }
+
+                if (selectedRoomType === 'Quad' && adultsSelect.value === '2') {
+                    document.getElementById('option1').style.display = 'block';
+                    document.getElementById('option2').style.display = 'block';
+                    document.getElementById('option3').style.display = 'block';
+                    document.getElementById('option4').style.display = 'block';
+                    document.getElementById('option5').style.display = 'none';
+                    childrenSelect.style.display = 'block';
+                    document.getElementById('child').style.display = 'block';
+                    document.getElementById('option-1').style.display = 'block';
+                    document.getElementById('option-2').style.display = 'block';
+                    document.getElementById('children').setAttribute('required', 'required');
+                    document.getElementById('option-3').style.display = 'none';
+                    document.getElementById('option-4').style.display = 'none';
+                    document.getElementById('option-5').style.display = 'none';
+                }
+
+                if (selectedRoomType === 'Quad' && adultsSelect.value === '1') {
+                    document.getElementById('option1').style.display = 'block';
+                    document.getElementById('option2').style.display = 'block';
+                    document.getElementById('option3').style.display = 'block';
+                    document.getElementById('option4').style.display = 'block';
+                    document.getElementById('option5').style.display = 'none';
+                    childrenSelect.style.display = 'block';
+                    document.getElementById('child').style.display = 'block';
+                    document.getElementById('option-1').style.display = 'block';
+                    document.getElementById('option-2').style.display = 'block';
+                    document.getElementById('children').setAttribute('required', 'required');
+                    document.getElementById('option-3').style.display = 'block';
+                    document.getElementById('option-4').style.display = 'none';
+                    document.getElementById('option-5').style.display = 'none';
+                }
+            }
+        });
+    });
+</script>
+

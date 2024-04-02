@@ -1,0 +1,82 @@
+<div id="reserve-popup" class="fixed top-8 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-20">
+        <form id="reservations-form" action="add_reservation.php" method="POST" class=" relative text-left w-[700px] h-[620px] mx-auto mt-0 p-8 bg-white rounded-xl shadow-lg">
+            <button id="close-reserve-popup" class="text-red-600 hover:text-red-500 absolute bg-red-200 hover:bg-red-100 px-[10px] pb-1 rounded-full top-2 right-2 z-20 text-3xl">×</button>
+            <div class="grid grid-cols-2 gap-x-16">
+                <div class="mt-4">
+                    <!-- Add this hidden field for user_id -->
+                    <input type="hidden" name="reserve_id" id="reserve_id" value="">
+
+                    <label for="Name" class="block text-[15px] text-gray-500 mb-1">Name</label>
+                    <input type="text" pattern="[a-zA-Z]+" name="nme" id="Name" class=" text-[15px] focus:outline-none focus:border-green-600 focus:border-2 w-full p-2 border border-gray-400 rounded-sm" required>
+
+                    <label for="emails" class="block text-[15px] text-gray-500 mt-4 mb-1">Email</label>
+                    <input type="email" name="mails" id="emailss" placeholder="eg: dheen@gmail.com" class=" text-[15px] focus:outline-none focus:border-green-600 focus:border-2 w-full p-2 border border-gray-400 rounded-sm" required>
+
+                    <label for="phone" class="block text-[15px] text-gray-500 mt-4 mb-1">Phone Number</label>
+                    <input type="tel" name="numbe" id="phon" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="enter 10 digits" class=" text-[15px] focus:outline-none focus:border-green-600 focus:border-2 w-full p-2 border border-gray-400 rounded-sm" required>
+
+                    <label for="address" class="block text-[15px] text-gray-500 mt-4 mb-1">Address</label>
+                    <textarea rows="4" cols="60" name="addre" id="addres" class=" resize-none focus:outline-none focus:border-green-600 focus:border-2 w-full p-2 border border-gray-400 rounded-sm" required></textarea>
+                    <!-- <textarea ></textarea> -->
+                    <label for="Adults" class="block text-[15px] text-gray-500 mt-4 mb-1">Adults</label>
+                    <select name="adu" id="adul" class=" text-[15px] focus:outline-none focus:border-green-600 focus:border-2 w-full p-2 border border-gray-400 rounded-sm" required>
+                        <option value="">Select Adults</option>
+                        <option value="1" id="option1">1</option>
+                        <option value="2" id="option2">2</option>
+                        <option value="3" id="option3">3</option>
+                        <option value="4" id="option4">4</option>
+                        <option value="5" id="option5">5</option>
+                    </select>
+
+                </div>
+                <div>
+                    <label for="Children" class="block text-[15px] text-gray-500 mt-4 mb-1">Children</label>
+                    <select name="chil" id="childr" class=" text-[15px] focus:outline-none focus:border-green-600 focus:border-2 w-full p-2 border border-gray-400 rounded-sm">
+                        <option value="">Select Children</option>
+                        <option value="0" id="option-0">0</option>
+                        <option value="1" id="option-1">1</option>
+                        <option value="2" id="option-2">2</option>
+                        <option value="3" id="option-3">3</option>
+                        <option value="4" id="option-4">4</option>
+                        <option value="5" id="option-5">5</option>
+                    </select>
+
+                    <label for="RoomType" class="block text-[15px] text-gray-500 mt-4 mb-1">Room Type</label>
+                    <select name="roomty" id="roomTyp" class="focus:outline-none focus:border-green-600 focus:border-2 w-full p-2 border border-gray-400 rounded-sm data-room-type" required>
+                        <option value="Single">Single</option>
+                        <option value="Double">Double</option>
+                        <option value="Triple">Triple</option>
+                        <option value="Quad">Quad</option>
+                        <option value="Family">Family</option>
+                        <option value="King">King</option>
+                        <option value="Queen">Queen</option>
+                        <option value="Guest">Guest</option>
+                    </select>
+
+                    <label for="RoomPrice" class="block text-[15px] text-gray-500 mt-4 mb-1">Room Price</label>
+                    <select name="roompr" id="roomPric" class="focus:outline-none focus:border-green-600 focus:border-2 w-full p-2 border border-gray-400 rounded-sm data-room-price" required>
+                        <option value="₹1,800">₹1,800</option>
+                        <option value="₹2,200">₹2,200</option>
+                        <option value="₹4,400">₹4,400</option>
+                        <option value="₹6,000">₹6,000</option>
+                        <option value="₹8,500">₹8,500</option>
+                        <option value="₹2,400">₹2,400</option>
+                        <option value="₹2,600">₹2,600</option>
+                        <option value="₹9,700">₹9,700</option>
+                    </select>
+
+                    <label for="checkIn" class="block text-[15px] text-gray-500 mt-4 mb-1">Check-In</label>
+                    <input type="date" name="checkin" id="checkin" class=" text-[15px] focus:outline-none focus:border-green-600 focus:border-2 w-full p-2 border border-gray-400 rounded-sm" required>
+
+                    <label for="checkOut" class="block text-[15px] text-gray-500 mt-4 mb-1">Check-Out</label>
+                    <input type="date" name="checkout" id="checkout" class=" text-[15px] focus:outline-none focus:border-green-600 focus:border-2 w-full p-2 border border-gray-400 rounded-sm" required>
+
+                    <!-- Hidden input field for total number of days -->
+                    <!-- <label for="TotalDayss" class="block text-[15px] mt-4 mb-1">Total Days</label> -->
+                    <input type="hidden" name="totalDays" id="totalDays">
+
+                </div>
+            </div>
+            <button type="submit" value="submit" name="add-submit" class="text-[15px] w-full bg-green-600 hover:bg-green-700 text-center text-white font-normal py-2 px-4 rounded-md mt-8">Add Reservation</button>
+        </form>
+    </div>

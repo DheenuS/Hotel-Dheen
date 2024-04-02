@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Check if any rows were affected by the update operation
         if (mysqli_affected_rows($con) > 0) {
             // Redirect to admindash.php
-            echo "<script>alert('User updated successfully.'); window.location.href = 'admindash.php';</script>";
+            echo "<script>alert('User updated successfully.'); window.location.href = 'admindash.php?';</script>";
             exit();
         } else {
             // No changes were made, so redirect with a message
