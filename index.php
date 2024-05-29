@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <!-- User Login Form -->
 
-    <div class=" absolute top-[180px] left-[340px] z-20">
+    <div class=" absolute top-[170px] left-[340px] z-20">
         <form action="" method="POST" id="userlogin">
             <div class=" mx-auto flex flex-col bg-gray-50 shadow-sm w-[380px] h-[460px] rounded-lg">
                 <div class=" flex justify-center items-center pt-10">
@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <!-- Admin Login -->
-    <div class=" absolute top-[180px] left-[740px]">
+    <div class=" absolute top-[170px] left-[740px]">
         <form action="" method="POST" id="adminlogin">
             <div class=" mx-auto flex flex-col bg-gray-50 shadow-sm w-[380px] h-[460px] rounded-lg">
                 <div class=" flex justify-center items-center pt-10">

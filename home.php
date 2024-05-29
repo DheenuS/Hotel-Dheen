@@ -157,11 +157,11 @@ mysqli_error($con);
                     <div class=" flex items-center justify-start space-x-2 px-1 mt-4">
                         <div class="text-[13px] font-medium">(4.5)</div>
                         <div class=" flex items-center justify-start gap-x-1">
-                        <img src="icons/star.png" alt="ratings" class="w-[15px] h-[15px]">
-                        <img src="icons/star.png" alt="ratings" class="w-[15px] h-[15px]">
-                        <img src="icons/star.png" alt="ratings" class="w-[15px] h-[15px]">
-                        <img src="icons/star.png" alt="ratings" class="w-[15px] h-[15px]">
-                        <img src="icons/rating.png" alt="ratings" class="w-[15px] h-[15px]">
+                            <img src="icons/star.png" alt="ratings" class="w-[15px] h-[15px]">
+                            <img src="icons/star.png" alt="ratings" class="w-[15px] h-[15px]">
+                            <img src="icons/star.png" alt="ratings" class="w-[15px] h-[15px]">
+                            <img src="icons/star.png" alt="ratings" class="w-[15px] h-[15px]">
+                            <img src="icons/rating.png" alt="ratings" class="w-[15px] h-[15px]">
                         </div>
                     </div>
 
@@ -545,7 +545,7 @@ mysqli_error($con);
         </div>
         <!-- View Details of Single Rooms -->
         <!-- View Details Popup -->
-        <div class="view-details-container-single inset-0 fixed hidden top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+        <div class="view-details-container-single inset-0 fixed hidden top-[-34px] w-full h-[800px] bg-black bg-opacity-50 z-50">
             <div class=" relative modal-content bg-white mx-auto mt-16 p-[40px] rounded-md w-[1000px] h-[660px]">
                 <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">Single Room</p>
                 <button class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl" id="closePopupSingle">×</button>
@@ -570,8 +570,8 @@ mysqli_error($con);
                         </div>
                         <div class="pr-6 text-wrap">
                             <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About room</p>
-                            <p class="text-gray-500 text-[14px] font-normal">This comfortable single room offers 180 square feet of space, perfect for solo travelers. It features a single bed that can accommodate one guest comfortably. Stay connected with free Wi-Fi and enjoy air conditioning for a pleasant stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh.
-                            The room is equipped with essential amenities like charging points, hangers, reading lamps, a telephone, a digital clock, a mirror, and a dustbin.For a restful sleep, a single bed with a blanket and pillow is provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
+                            <p class="text-gray-500 text-[14px] font-normal text-justify">This comfortable single room offers 180 square feet of space, perfect for solo travelers. It features a single bed that can accommodate one guest comfortably. Stay connected with free Wi-Fi and enjoy air conditioning for a pleasant stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh.
+                                The room is equipped with essential amenities like charging points, hangers, reading lamps, a telephone, a digital clock, a mirror, and a dustbin.For a restful sleep, a single bed with a blanket and pillow is provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
                         </div>
                     </div>
                     <p class="text-black text-[16px] font-bold mt-4">Amenites</p>
@@ -621,7 +621,7 @@ mysqli_error($con);
             </div>
         </div>
         <!-- View Details of Double Rooms -->
-        <div class="view-details-container-double inset-0 hidden fixed top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+        <div class="view-details-container-double inset-0 hidden fixed top-[-34px] w-full h-[800px] bg-black bg-opacity-50 z-50">
             <div class=" relative modal-content bg-white mx-auto mt-16 p-[40px] rounded-md w-[1000px] h-[660px]">
                 <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">Double Room</p>
                 <button class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl" id="closePopupDouble">×</button>
@@ -646,7 +646,7 @@ mysqli_error($con);
                         </div>
                         <div class="pr-6 text-wrap">
                             <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About room</p>
-                            <p class="text-gray-500 text-[14px] font-normal">This double room offers 240 square feet of space, ideal for couples or small families. It features two comfortable double beds that can accommodate up to three guests. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room is equipped with essential amenities like charging points, reading lamps, a telephone, a digital clock, a mirror, hangers, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, two double beds with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, dustbin, and a western toilet.</p>
+                            <p class="text-gray-500 text-[14px] font-normal text-justify">This double room offers 240 square feet of space, ideal for couples or small families. It features two comfortable double beds that can accommodate up to three guests. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room is equipped with essential amenities like charging points, reading lamps, a telephone, a digital clock, a mirror, hangers, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, two double beds with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, dustbin, and a western toilet.</p>
                         </div>
                     </div>
                     <p class="text-black text-[16px] font-bold mt-4">Amenites</p>
@@ -697,7 +697,7 @@ mysqli_error($con);
             </div>
         </div>
         <!-- View Details of Triple Rooms -->
-        <div class="view-details-container-triple inset-0 hidden fixed top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+        <div class="view-details-container-triple inset-0 hidden fixed top-[-34px] w-full h-[800px] bg-black bg-opacity-50 z-50">
             <div class=" relative modal-content bg-white mx-auto mt-16 p-[40px] rounded-md w-[1000px] h-[660px]">
                 <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">Triple Room</p>
                 <button class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl" id="closePopupTriple">×</button>
@@ -722,7 +722,7 @@ mysqli_error($con);
                         </div>
                         <div class="pr-6 text-wrap">
                             <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About room</p>
-                            <p class="text-gray-500 text-[14px] font-normal">This triple room offers space of 280 square feet, perfect for groups or families of up to five guests. It features three comfortable beds that can accommodate your entire party. Stay connected with free Wi-Fi and enjoy air conditioning for a pleasant stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs.The room is equipped with essential amenities like charging points, hangers, a telephone, a work desk for productivity, reading lamps, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, three beds with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
+                            <p class="text-gray-500 text-[14px] font-normal text-justify">This triple room offers space of 280 square feet, perfect for groups or families of up to five guests. It features three comfortable beds that can accommodate your entire party. Stay connected with free Wi-Fi and enjoy air conditioning for a pleasant stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs.The room is equipped with essential amenities like charging points, hangers, a telephone, a work desk for productivity, reading lamps, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, three beds with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
                         </div>
                     </div>
                     <p class="text-black text-[16px] font-bold mt-4">Amenites</p>
@@ -774,7 +774,7 @@ mysqli_error($con);
             </div>
         </div>
         <!-- View Details of Quad Rooms -->
-        <div class="view-details-container-quad inset-0 hidden fixed top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+        <div class="view-details-container-quad inset-0 hidden fixed top-[-34px] w-full h-[800px] bg-black bg-opacity-50 z-50">
             <div class=" relative modal-content bg-white mx-auto mt-16 p-[40px] rounded-md w-[1000px] h-[660px]">
                 <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">Quad Room</p>
                 <button class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl" id="closePopupQuad">×</button>
@@ -799,7 +799,7 @@ mysqli_error($con);
                         </div>
                         <div class="pr-6 text-wrap">
                             <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About the room</p>
-                            <p class="text-gray-500 text-[14px] font-normal">This quad room offers 310 square feet of space, perfect for larger groups or families of up to six guests. It features four comfortable beds, providing ample sleeping arrangements for everyone. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room is equipped with essential amenities like charging points, hangers, a telephone, a work desk for productivity, reading lamps, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, four beds with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
+                            <p class="text-gray-500 text-[14px] font-normal text-justify">This quad room offers 310 square feet of space, perfect for larger groups or families of up to six guests. It features four comfortable beds, providing ample sleeping arrangements for everyone. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room is equipped with essential amenities like charging points, hangers, a telephone, a work desk for productivity, reading lamps, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, four beds with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
                         </div>
                     </div>
                     <p class="text-black text-[16px] font-bold mt-4">Amenites</p>
@@ -851,7 +851,7 @@ mysqli_error($con);
             </div>
         </div>
         <!-- View Details of Family Rooms -->
-        <div class="view-details-container-family inset-0 hidden fixed top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+        <div class="view-details-container-family inset-0 hidden fixed top-[-34px] w-full h-[800px] bg-black bg-opacity-50 z-50">
             <div class=" relative modal-content bg-white mx-auto mt-16 p-[40px] rounded-md w-[1000px] h-[660px]">
                 <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">Family Room</p>
                 <button class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl" id="closePopupFamily">×</button>
@@ -876,7 +876,7 @@ mysqli_error($con);
                         </div>
                         <div class="pr-6 text-wrap">
                             <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About room</p>
-                            <p class="text-gray-500 text-[14px] font-normal">This expansive(larger) family room boasts a generous 440 square feet, ideal for families or groups of up to eight guests. It features four comfortable family beds, providing ample sleeping space for everyone. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room caters to families with essential amenities like charging points, hangers, a telephone, a work desk for productivity, reading lamps, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, four family beds with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
+                            <p class="text-gray-500 text-[14px] font-normal text-justify">This expansive(larger) family room boasts a generous 440 square feet, ideal for families or groups of up to eight guests. It features four comfortable family beds, providing ample sleeping space for everyone. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room caters to families with essential amenities like charging points, hangers, a telephone, a work desk for productivity, reading lamps, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, four family beds with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
                         </div>
                     </div>
                     <p class="text-black text-[16px] font-bold mt-4">Amenites</p>
@@ -928,7 +928,7 @@ mysqli_error($con);
             </div>
         </div>
         <!-- View Details of King Rooms -->
-        <div class="view-details-container-king inset-0 hidden fixed top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+        <div class="view-details-container-king inset-0 hidden fixed top-[-34px] w-full h-[800px] bg-black bg-opacity-50 z-50">
             <div class=" relative modal-content bg-white mx-auto mt-16 p-[40px] rounded-md w-[1000px] h-[660px]">
                 <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">King Room</p>
                 <button class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl" id="closePopupKing">×</button>
@@ -953,7 +953,7 @@ mysqli_error($con);
                         </div>
                         <div class="pr-6 text-wrap">
                             <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About room</p>
-                            <p class="text-gray-500 text-[14px] font-normal">This luxurious king room offers 260 square feet of space, perfect for couples seeking extra comfort or small groups up to three guests. It features two king-size beds, providing calm sleeping space for a relaxing stay. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable environment. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room caters to both productivity and relaxation with amenities like charging points, hangers, a work desk, reading lamps for comfortable reading, a telephone, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, two king-size beds with cozy blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
+                            <p class="text-gray-500 text-[14px] font-normal text-justify">This luxurious king room offers 260 square feet of space, perfect for couples seeking extra comfort or small groups up to three guests. It features two king-size beds, providing calm sleeping space for a relaxing stay. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable environment. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room caters to both productivity and relaxation with amenities like charging points, hangers, a work desk, reading lamps for comfortable reading, a telephone, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, two king-size beds with cozy blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
                         </div>
                     </div>
                     <p class="text-black text-[16px] font-bold mt-4">Amenites</p>
@@ -1005,7 +1005,7 @@ mysqli_error($con);
             </div>
         </div>
         <!-- View Details of Queen Rooms -->
-        <div class="view-details-container-queen inset-0 hidden fixed top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+        <div class="view-details-container-queen inset-0 hidden fixed top-[-34px] w-full h-[800px] bg-black bg-opacity-50 z-50">
             <div class=" relative modal-content bg-white mx-auto mt-16 p-[40px] rounded-md w-[1000px] h-[660px]">
                 <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">Queen Room</p>
                 <button class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl" id="closePopupQueen">×</button>
@@ -1030,7 +1030,7 @@ mysqli_error($con);
                         </div>
                         <div class="pr-6 text-wrap">
                             <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About room</p>
-                            <p class="text-gray-500 text-[14px] font-normal">This comfortable queen room offers 220 square feet of space, perfect for couples or small groups of up to three guests. It features a plush queen-size bed, providing ample sleeping space for a relaxing stay. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable environment. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room with amenities like charging points, hangers, a work desk, reading lamps for comfortable reading, a telephone, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, a queen-size bed with cozy blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
+                            <p class="text-gray-500 text-[14px] font-normal text-justify">This comfortable queen room offers 220 square feet of space, perfect for couples or small groups of up to three guests. It features a plush queen-size bed, providing ample sleeping space for a relaxing stay. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable environment. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room with amenities like charging points, hangers, a work desk, reading lamps for comfortable reading, a telephone, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, a queen-size bed with cozy blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
                         </div>
                     </div>
                     <p class="text-black text-[16px] font-bold mt-4">Amenites</p>
@@ -1082,7 +1082,7 @@ mysqli_error($con);
             </div>
         </div>
         <!-- View Details of Guest Rooms -->
-        <div class="view-details-container-guest inset-0 hidden fixed top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+        <div class="view-details-container-guest inset-0 hidden fixed top-[-34px] w-full h-[800px] bg-black bg-opacity-50 z-50">
             <div class=" relative modal-content bg-white mx-auto mt-16 p-[40px] rounded-md w-[1000px] h-[660px]">
                 <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">Guest Room</p>
                 <button class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl" id="closePopupGuest">×</button>
@@ -1107,7 +1107,7 @@ mysqli_error($con);
                         </div>
                         <div class="pr-6 text-wrap">
                             <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About room</p>
-                            <p class="text-gray-500 text-[14px] font-normal">This expansive guest room offers a generous 520 square feet of space, perfect for large groups or families of up to 10 guests. It features five comfortable premium beds, providing ample sleeping arrangements for everyone. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room with essential amenities like charging points, hangers, a work desk for productivity, reading lamps, a telephone, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, five premium beds along with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
+                            <p class="text-gray-500 text-[14px] font-normal text-justify">This expansive guest room offers a generous 520 square feet of space, perfect for large groups or families of up to 10 guests. It features five comfortable premium beds, providing ample sleeping arrangements for everyone. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room with essential amenities like charging points, hangers, a work desk for productivity, reading lamps, a telephone, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, five premium beds along with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
                         </div>
                     </div>
                     <p class="text-black text-[16px] font-bold mt-4">Amenites</p>
@@ -1455,9 +1455,9 @@ mysqli_error($con);
                 });
             });
         </script>
-        
+
         <!-- Booking Registration form -->
-        <div id="popups" class=" fixed hidden top-9 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-20"><!-- booking-form  -->
+        <div id="popups" class=" fixed hidden top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50"><!-- booking-form  -->
             <form id="reservation-form" action="" method="POST" class=" relative text-left w-[700px] h-[650px] mx-auto mt-2 pt-[30px] pb-[40px] px-10 bg-white rounded-md shadow-lg">
                 <button id="close-popup" class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl">×</button>
                 <h1 class="text-[24px] font-semibold text-center mt-[-10px] mb-2">Reservation Form</h1>

@@ -241,7 +241,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
         </div>
 
         <div class="flex ml-6 mt-4 space-x-6 overflow-y-hidden pb-6 bg-gray-100">
-            <div class=" flex flex-col gap-y-4 justify-start w-[544px] h-[480px] bg-white shadow-xl rounded-md">
+            <div class=" flex flex-col gap-y-4 justify-start w-[544px] h-[450px] bg-white shadow-xl rounded-md">
                 <p class="text-[18px] font-semibold text-gray-600 text-start mt-3 mb-0 ml-4">Rooms</p>
                 <div class="flex items-center justify-start mt-[-10px] p-[10px] bg-gray-100 hover:bg-gray-200 rounded-md mx-2">
                     <p class="text-[16px] font-semibold text-gray-600 text-start ml-[52px] mr-[52px]">Type</p>
@@ -337,7 +337,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
                 $guestRoomFetchBooked = mysqli_fetch_assoc($guestRoomBookedExecute);
                 ?>
                 <div class="flex justify-start space-x-8 mt-[-8px]">
-                    <div class=" text-left space-y-6 px-6 py-[6px] ml-2">
+                    <div class=" text-left space-y-5 px-6 py-[6px] ml-2">
                         <div class=" flex justify-start items-center gap-x-4 ml-2 ">
                             <div class=" w-[16px] h-[16px] rounded-full bg-[#707070]"></div>
                             <p class="text-[15px] text-gray-500 font-medium">Single</p>
@@ -371,7 +371,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
                             <p class="text-[15px] text-gray-500 font-medium">Guest</p>
                         </div>
                     </div>
-                    <div class="flex flex-col text-left space-y-4 pl-[32px] pr-[40px] py-[2px]">
+                    <div class="flex flex-col text-left space-y-3 pl-[32px] pr-[40px] py-[2px]">
                         <p class="text-[20px] font-semibold"><?php echo $singleRoomFetchAvailable['availablerooms']; ?>/10</p>
                         <p class="text-[20px] font-semibold"><?php echo $doubleRoomFetchAvailable['availablerooms']; ?>/10</p>
                         <p class="text-[20px] font-semibold"><?php echo $tripleRoomFetchAvailable['availablerooms']; ?>/10</p>
@@ -381,7 +381,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
                         <p class="text-[20px] font-semibold"><?php echo $queenRoomFetchAvailable['availablerooms']; ?>/10</p>
                         <p class="text-[20px] font-semibold"><?php echo $guestRoomFetchAvailable['availablerooms']; ?>/10</p>
                     </div>
-                    <div class="flex flex-col text-left space-y-4 pl-[54px] pr-[40px] py-[2px]">
+                    <div class="flex flex-col text-left space-y-3 pl-[54px] pr-[40px] py-[2px]">
                         <p class="text-[20px] font-semibold"><?php echo $singleRoomFetchBooked['bookedrooms']; ?></p>
                         <p class="text-[20px] font-semibold"><?php echo $doubleRoomFetchBooked['bookedrooms']; ?></p>
                         <p class="text-[20px] font-semibold"><?php echo $tripleRoomFetchBooked['bookedrooms']; ?></p>
@@ -393,9 +393,9 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
                     </div>
                 </div>
             </div>
-            <div class="chart-container bg-white w-[546px] h-[480px] rounded-md shadow-xl">
+            <div class="chart-container bg-white w-[546px] h-[450px] rounded-md shadow-xl">
                 <p class="text-[18px] font-semibold text-gray-600 text-start mt-3 ml-4">Reserved Rooms</p>
-                <div class=" doughnut-chart-container w-[430px] h-[430px] ml-8">
+                <div class=" doughnut-chart-container w-[430px] h-[390px] ml-8 flex items-start justify-center">
                     <canvas id="doughnut-chartcanvas" class=""></canvas>
                 </div>
             </div>
@@ -641,7 +641,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
 <!-- Reservation Starts -->
     <div id="Reservation" class="tabcontent overflow-y-scroll bg-gray-100">
         <form action="reserve_deleteall.php" method="POST">
-            <div class="sticky top-0 py-[8px] bg-gray-100 ml-[-18px] w-[2238px] pl-[12px] pr-2 z-10 flex justify-start item-start space-x-4">
+            <div class="sticky top-0 py-[8px] bg-gray-100 ml-[-18px] w-[2348px] pl-[12px] pr-2 z-10 flex justify-start item-start space-x-4">
                 <button type="submit" name="reserve_delete_all" class=" ml-2 flex items-center justify-center space-x-2 px-4 py-2 bg-red-500 hover:bg-red-600 rounded-md text-white" onclick="confirmDeleteReserve()">
                     <span class="material-symbols-outlined text-[20px] text-white mt-[1px]">
                         delete
@@ -668,7 +668,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
                     <p class="text-[16px] font-semibold text-gray-600 text-start mt-2 ml-[-4px]">Total Reservation: <?php echo $rowReservation['guestReservation']; ?></p>
                 </div>
             </div>
-            <table class=" w-full mt-0 border-collapse bg-white text-nowrap overflow-x-scroll">
+            <table class=" w-full mt-0 border-collapse bg-white text-nowrap overflow-x-scroll mb-8">
                 <thead class=" sticky top-[60px] text-left bg-gray-200">
                     <tr class=" space-x-8 border-b border-b-2 border-gray-300">
                         <th class="py-4 px-4">
@@ -874,7 +874,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
             document.getElementById('reserveEditPopup').classList.add('hidden');
         }
     </script>
-    <div id="reserve-popup" class=" hidden fixed top-9 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-20">
+    <div id="reserve-popup" class=" hidden fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
         <form id="reservations-form" action="add_reservation.php" method="POST" class=" relative text-left w-[700px] h-[650px] mx-auto mt-2 py-8 px-10  bg-white rounded-md shadow-lg">
             <button id="close-reserve-popup" class="absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl">×</button>
             <h1 class="text-[24px] font-semibold text-center mt-[-10px] mb-2">New Reservation Form</h1>
@@ -1062,7 +1062,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
         <div>
             <!-- <div class=" mx-auto flex justify-center px-16 container text-center bg-gray-200 mt-10 pt-12 pb-12 rounded-xl"> -->
 
-            <div class=" relative px-6 gap-x-16 gap-y-8 grid grid-cols-4 grid-rows-2 mt-4">
+            <div class=" relative px-6 gap-x-16 gap-y-3 grid grid-cols-4 grid-rows-2 mt-2 mb-8">
                 <!-- Room 1 -->
                 <!-- Room card with form for storing room information -->
                 <div data-room-id="1" class="totalrooms room-card bg-[#fafafa] relative w-[240px] h-[300px] rounded-lg shadow-lg p-2 z-1">
@@ -1307,7 +1307,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
 
 <!-- View Details Popup -->
 <!-- View Details of Single Rooms -->
-    <div id="view-single" class=" hidden inset-0 fixed top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+    <div id="view-single" class=" view-details-container-single hidden inset-0 fixed top-[-20px] w-full h-[800px] bg-black bg-opacity-50 z-50">
         <div class=" relative modal-content bg-white mx-auto mt-12 p-[40px] rounded-md w-[1000px] h-[660px]">
             <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">Single Room</p>
             <button id="closePopupSingle" class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl">×</button>
@@ -1332,7 +1332,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
                     </div>
                     <div class="pr-6 text-wrap">
                         <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About room</p>
-                        <p class="text-[14px] text-gray-600 font-normal">This comfortable single room offers 180 square feet of space, perfect for solo travelers. It features a single bed that can accommodate one guest comfortably. Stay connected with free Wi-Fi and enjoy air conditioning for a pleasant stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh.
+                        <p class="text-[14px] text-gray-600 font-normal text-justify">This comfortable single room offers 180 square feet of space, perfect for solo travelers. It features a single bed that can accommodate one guest comfortably. Stay connected with free Wi-Fi and enjoy air conditioning for a pleasant stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh.
                             The room is equipped with essential amenities like charging points, hangers, reading lamps, a telephone, a digital clock, a mirror, and a dustbin.For a restful sleep, a single bed with a blanket and pillow is provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
                     </div>
                 </div>
@@ -1402,7 +1402,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
     </script>
 
     <!-- View Details of Double Rooms -->
-    <div id="view-double" class=" hidden inset-0 fixed top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+    <div id="view-double" class=" view-details-container-double hidden inset-0 fixed top-[-20px] w-full h-[800px] bg-black bg-opacity-50 z-50">
         <div class=" relative modal-content bg-white mx-auto mt-12 p-[40px] rounded-md w-[1000px] h-[660px]">
             <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">Double Room</p>
             <button class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl" id="closePopupDouble">×</button>
@@ -1427,7 +1427,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
                     </div>
                     <div class="pr-6 text-wrap">
                         <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About room</p>
-                        <p class="text-gray-600 text-[14px] font-normal">
+                        <p class="text-gray-600 text-[14px] font-normal text-justify">
                             This double room offers 240 square feet of space, ideal for couples or small families. It features two comfortable double beds that can accommodate up to three guests. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room is equipped with essential amenities like charging points, reading lamps, a telephone, a digital clock, a mirror, hangers, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, two double beds with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, dustbin, and a western toilet.
                         </p>
                     </div>
@@ -1499,7 +1499,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
     </script>
 
     <!-- View Details of Triple Rooms -->
-    <div id="view-triple" class=" hidden inset-0 fixed top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+    <div id="view-triple" class=" view-details-container-triple hidden inset-0 fixed top-[-20px] w-full h-[800px] bg-black bg-opacity-50 z-50">
         <div class=" relative modal-content bg-white mx-auto mt-12 p-[40px] rounded-md w-[1000px] h-[660px]">
             <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">Triple Room</p>
             <button class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl" id="closePopupTriple">×</button>
@@ -1524,7 +1524,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
                     </div>
                     <div class="pr-6 text-wrap">
                         <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About room</p>
-                        <p class="text-gray-600 text-[14px] font-normal">
+                        <p class="text-gray-600 text-[14px] font-normal text-justify">
                         This triple room offers space of 280 square feet, perfect for groups or families of up to five guests. It features three comfortable beds that can accommodate your entire party. Stay connected with free Wi-Fi and enjoy air conditioning for a pleasant stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs.The room is equipped with essential amenities like charging points, hangers, a telephone, a work desk for productivity, reading lamps, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, three beds with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.
                         </p>
                     </div>
@@ -1597,7 +1597,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
         });
     </script>
     <!-- View Details of Quad Rooms -->
-    <div id="view-quad" class=" hidden inset-0 fixed top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+    <div id="view-quad" class=" view-details-container-quad hidden inset-0 fixed top-[-20px] w-full h-[800px] bg-black bg-opacity-50 z-50">
         <div class=" relative modal-content bg-white mx-auto mt-12 p-[40px] rounded-md w-[1000px] h-[660px]">
             <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">Quad Room</p>
             <button class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl" id="closePopupQuad">×</button>
@@ -1622,7 +1622,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
                     </div>
                     <div class="pr-6 text-wrap">
                         <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About room</p>
-                        <p class="text-gray-600 text-[14px] font-normal">This quad room offers 310 square feet of space, perfect for larger groups or families of up to six guests. It features four comfortable beds, providing ample sleeping arrangements for everyone. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room is equipped with essential amenities like charging points, hangers, a telephone, a work desk for productivity, reading lamps, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, four beds with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
+                        <p class="text-gray-600 text-[14px] font-normal text-justify">This quad room offers 310 square feet of space, perfect for larger groups or families of up to six guests. It features four comfortable beds, providing ample sleeping arrangements for everyone. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room is equipped with essential amenities like charging points, hangers, a telephone, a work desk for productivity, reading lamps, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, four beds with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
                     </div>
                 </div>
                 <p class="text-black text-[16px] font-bold mt-4">Amenites</p>
@@ -1693,7 +1693,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
         });
     </script>
     <!-- View Details of Family Rooms -->
-    <div id="view-family" class=" hidden inset-0 fixed top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+    <div id="view-family" class=" view-details-container-family hidden inset-0 fixed top-[-20px] w-full h-[800px] bg-black bg-opacity-50 z-50">
         <div class=" relative modal-content bg-white mx-auto mt-12 p-[40px] rounded-md w-[1000px] h-[660px]">
             <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">Family Room</p>
             <button class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl" id="closePopupFamily">×</button>
@@ -1718,7 +1718,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
                     </div>
                     <div class="pr-6 text-wrap">
                         <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About room</p>
-                        <p class="text-gray-600 text-[14px] font-normal">This expansive(larger) family room boasts a generous 440 square feet, ideal for families or groups of up to eight guests. It features four comfortable family beds, providing ample sleeping space for everyone. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room caters to families with essential amenities like charging points, hangers, a telephone, a work desk for productivity, reading lamps, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, four family beds with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
+                        <p class="text-gray-600 text-[14px] font-normal text-justify">This expansive(larger) family room boasts a generous 440 square feet, ideal for families or groups of up to eight guests. It features four comfortable family beds, providing ample sleeping space for everyone. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room caters to families with essential amenities like charging points, hangers, a telephone, a work desk for productivity, reading lamps, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, four family beds with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.</p>
                     </div>
                 </div>
                 <p class="text-black text-[16px] font-bold mt-4">Amenites</p>
@@ -1789,7 +1789,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
         });
     </script>
     <!-- View Details of King Rooms -->
-    <div id="view-king" class="view-details-container-king hidden inset-0 fixed top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+    <div id="view-king" class="view-details-container-king hidden inset-0 fixed top-[-20px] w-full h-[800px] bg-black bg-opacity-50 z-50">
         <div class=" relative modal-content bg-white mx-auto mt-12 p-[40px] rounded-md w-[1000px] h-[660px]">
             <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">King Room</p>
             <button class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl" id="closePopupKing">×</button>
@@ -1814,7 +1814,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
                     </div>
                     <div class="pr-6 text-wrap">
                         <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About room</p>
-                        <p class="text-gray-600 text-[14px] font-normal">
+                        <p class="text-gray-600 text-[14px] font-normal text-justify">
                         This luxurious king room offers 260 square feet of space, perfect for couples seeking extra comfort or small groups up to three guests. It features two king-size beds, providing calm sleeping space for a relaxing stay. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable environment. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room caters to both productivity and relaxation with amenities like charging points, hangers, a work desk, reading lamps for comfortable reading, a telephone, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, two king-size beds with cozy blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.
                         </p>
                     </div>
@@ -1887,7 +1887,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
         });
     </script>
     <!-- View Details of Queen Rooms -->
-    <div id="view-queen" class="view-details-container-queen hidden inset-0 fixed top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+    <div id="view-queen" class="view-details-container-queen hidden inset-0 fixed top-[-20px] w-full h-[800px] bg-black bg-opacity-50 z-50">
         <div class=" relative modal-content bg-white mx-auto mt-12 p-[40px] rounded-md w-[1000px] h-[660px]">
             <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">Queen Room</p>
             <button class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl" id="closePopupQueen">×</button>
@@ -1912,7 +1912,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
                     </div>
                     <div class="pr-6 text-wrap">
                         <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About the room</p>
-                        <p class="text-gray-600 text-[14px] font-normal">
+                        <p class="text-gray-600 text-[14px] font-normal text-justify">
                         This comfortable queen room offers 220 square feet of space, perfect for couples or small groups of up to three guests. It features a plush queen-size bed, providing ample sleeping space for a relaxing stay. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable environment. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room with amenities like charging points, hangers, a work desk, reading lamps for comfortable reading, a telephone, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, a queen-size bed with cozy blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.
                         </p>
                     </div>
@@ -1985,7 +1985,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
         });
     </script>
     <!-- View Details of Guest Rooms -->
-    <div id="view-guest" class="view-details-container-guest hidden inset-0 fixed top-0 w-full h-[800px] bg-black bg-opacity-50 z-50">
+    <div id="view-guest" class="view-details-container-guest hidden inset-0 fixed top-[-20px] w-full h-[800px] bg-black bg-opacity-50 z-50">
         <div class=" relative modal-content bg-white mx-auto mt-12 p-[40px] rounded-md w-[1000px] h-[660px]">
             <p class=" sticky bg-white absolute text-[24px] font-semibold z-10">Guest Room</p>
             <button class=" absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[10px] right-[10px] z-20 text-xl" id="closePopupGuest">×</button>
@@ -2010,7 +2010,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
                     </div>
                     <div class="pr-6 text-wrap">
                         <p class="text-black text-[16px] font-bold mt-[-6px] pb-1">About room</p>
-                        <p class="text-gray-600 text-[14px] font-normal">
+                        <p class="text-gray-600 text-[14px] font-normal text-justify">
                         This expansive guest room offers a generous 520 square feet of space, perfect for large groups or families of up to 10 guests. It features five comfortable premium beds, providing ample sleeping arrangements for everyone. Stay connected with free Wi-Fi and enjoy air conditioning for a comfortable stay. We provide 24-hour room service for your convenience and daily housekeeping to keep your room fresh. Additionally, laundry service is available for your needs. The room with essential amenities like charging points, hangers, a work desk for productivity, reading lamps, a telephone, a digital clock, a mirror, and a dustbin. Enjoy with the in-room TV and music system. For a restful sleep, five premium beds along with blankets and pillows are provided. Your safety and security are our priority. The room features digital locks, a fire extinguisher, and an emergency alarm. The private bathroom includes a water heater, shower, shaving mirror, dustbin, and a western toilet.
                         </p>
                     </div>
@@ -2130,7 +2130,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
                 </div>
             </form>
         </div>
-        <div class="relative ml-4 mt-0 mb-6 gap-x-10 gap-y-4 grid grid-cols-5 grid-rows-3">
+        <div class="relative ml-4 mt-0 mb-10 gap-x-10 gap-y-4 grid grid-cols-5 grid-rows-3">
             <?php
 
             $query = "SELECT * FROM staffs";

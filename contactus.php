@@ -48,7 +48,7 @@ if (!empty($gmail) && !empty($msg) && !is_numeric($gmail)) {
         </div>
     </nav>
     <!-- Contact Us -->
-    <div class="flex justify-center">
+    <div class="flex justify-center mt-[-20px]">
         <div class=" flex w-[850px] h-[640px] space-x-20">
             <div class="flex flex-col w-[600px] h-[600px]">
                 <h1 class=" text-black text-[28px] mt-[40px] pb-4 font-semibold">Contact Us</h1>

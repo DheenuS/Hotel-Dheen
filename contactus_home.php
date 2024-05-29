@@ -49,7 +49,7 @@ if (!empty($gmail) && !empty($msg) && !is_numeric($gmail)) {
         </div>
     </nav>
     <!-- Contact Us -->
-    <div class="flex justify-center">
+    <div class="flex justify-center mt-[-20px]">
         <div class=" flex w-[850px] h-[640px] space-x-20">
             <div class="flex flex-col w-[600px] h-[600px]">
                 <h1 class=" text-black text-[28px] mt-[40px] pb-4 font-semibold">Contact Us</h1>
@@ -107,7 +107,7 @@ if (!empty($gmail) && !empty($msg) && !is_numeric($gmail)) {
                     <input type="email" name="mail" class=" w-[276px] h-[38px] focus:outline-none focus:border-blue-600 focus:border-2 text-black text-[16px] border mt-[16px] py-[4px] pl-[6px] outline-none border-gray-400 rounded-sm" required>
 
                     <label class=" text-[16px] mt-[20px]">Message</label>
-                    <textarea rows="4" cols="50" name="mess" pattern="[a-zA-Z\s']+" placeholder="Send us your message" class=" resize-none text-wrap w-[276px] text-black text-[16px] border-2 mt-[16px] py-[4px] pl-[6px] py-[10px] outline-none border-gray-300 rounded-sm" required></textarea>
+                    <textarea rows="4" cols="50" name="mess" pattern="[a-zA-Z\s']+" placeholder="Send us your message" class="focus:outline-none focus:border-blue-600 focus:border-2 resize-none text-wrap w-[276px] text-black text-[16px] border-2 mt-[16px] py-[4px] pl-[6px] py-[10px] outline-none border-gray-300 rounded-sm" required></textarea>
 
                     <button type="submit" value="submit" name="submit" class=" text-[16px] w-[276px] mt-[60px] bg-blue-600 hover:bg-blue-700 text-white font-normal pt-[8px] pb-[8px] rounded-md" required>Submit</button>
                 </div>
