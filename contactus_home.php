@@ -35,7 +35,6 @@ if (!empty($gmail) && !empty($msg) && !is_numeric($gmail)) {
     <!-- Google Icon import link -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- CSS Link -->
-    <link rel="stylesheet" href="css/home.css">
 
 <body class=" bg-white">
     <!-- Navigation -->

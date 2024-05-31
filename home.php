@@ -38,8 +38,6 @@ mysqli_error($con);
     <!-- <script defer src="js/main.js"></script> -->
     <!-- Tailwind css link -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- CSS Link -->
-    <link rel="stylesheet" href="css/home.css">
     <!-- Google Icon import link -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
@@ -2321,7 +2319,7 @@ mysqli_error($con);
         });
     </script>
     <!-- Top Scroll and view details-->
-    <script src="js/home.js"></script>
+    <script src="home.js"></script>
 </body>
 
 </html>
