@@ -41,6 +41,8 @@ mysqli_error($con);
     <!-- Google Icon import link -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
         /* Scroll bar */
         ::-webkit-scrollbar {
             width: 6px;
@@ -55,6 +57,10 @@ mysqli_error($con);
         /* Scroll behaviour */
         html {
             scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'sarabun';
         }
 
         .hotel {
@@ -75,22 +81,21 @@ mysqli_error($con);
             background-color: rgba(0, 0, 0, 0.55);
         }
     </style>
-</head>
-
-<body class=" bg-gray-100 cursor-default">
-
-    <!-- Navigation -->
-    <nav class=" px-[60px] bg-gray-50 flex items-center justify-between sticky top-0 shadow-xl py-[20px] z-40">
+</head>     
+        <body class=" bg-gray-100 cursor-default">
+        
+        <!-- Navigation -->
+        <nav class=" px-[60px] bg-gray-50 flex items-center justify-between sticky top-0 shadow-xl py-[20px] z-40">
         <div class="text-gray-800 text-nowrap text-[26px] font-semibold ">Hotel Dheen</div>
         <div class="container flex justify-end">
-            <div class="flex items-center space-x-8 font-normal text-[16px] text-black">
-                <a href="#" class=" duration-300 hover:underline underline-offset-8">Home</a>
-                <a href="#about" class=" hover:underline underline-offset-8">About Us</a>
-                <a href="#rooms" class=" hover:underline underline-offset-8">Rooms</a>
-                <a href="#testimonials" class=" hover:underline underline-offset-8">Testimonials</a>
-                <a href="#contact" class=" hover:underline underline-offset-8">Contact Us</a>
-                <a href="index.php" class="hover:bg-blue-600 bg-blue-500 flex items-center justify-center text-gray-100 font-normal pl-[12px] pr-[12px] pt-[8px] pb-[8px] rounded-md">
-                    <span class="material-symbols-outlined text-[20px] font-normal mt-[2px] mr-1 text-white">
+        <div class="flex items-center space-x-8 font-normal text-[16px] text-black">
+        <a href="#" class=" duration-300 hover:underline underline-offset-8">Home</a>
+        <a href="#about" class=" hover:underline underline-offset-8">About Us</a>
+        <a href="#rooms" class=" hover:underline underline-offset-8">Rooms</a>
+        <a href="#testimonials" class=" hover:underline underline-offset-8">Testimonials</a>
+        <a href="#contact" class=" hover:underline underline-offset-8">Contact Us</a>
+        <a href="index.php" class="hover:bg-blue-600 bg-blue-500 flex items-center justify-center text-gray-100 font-normal pl-[12px] pr-[12px] pt-[8px] pb-[8px] rounded-md">
+        <span class="material-symbols-outlined text-[20px] font-normal mt-[2px] mr-1 text-white">
                         logout
                     </span>
                     <button class=" text-[16px]">Logout</button>
@@ -104,7 +109,7 @@ mysqli_error($con);
     <div class="h-screen hotel">
         <div class="relative">
             <div class=" absolute top-[100px] left-[310px] p-28 bg-black/20 backdrop-blur-sm hover:backdrop-blur-sm text-center space-y-2 z-10 shadow-black hover:shadow-md rounded-md">
-                <h1 class=" text-[54px] font-bold text-white">Welcome to Hotel Dheen</h1>
+                <h1 class=" text-[54px] font-bold text-white font-poppins">Welcome to Hotel Dheen</h1>
                 <h5 class=" text-[28px] font-semibold text-white">🙶 The place where you feel <span class="auto-type text-blue-500 "></span>🙷</h5>
             </div>
         </div>

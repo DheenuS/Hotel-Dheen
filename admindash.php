@@ -39,6 +39,11 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- CSS Link -->
     <style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+    body {
+            font-family: 'sarabun';
+        }
         /* body {
             cursor: url("icons/cursor.svg"), auto;
         } */
@@ -2154,13 +2159,13 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
                     <p class="font-semibold text-[13px] pt-2"><?php echo $name ?></p>
                     <p class="font-semibold text-[12px] text-gray-400 pb-4"><?php echo $role ?></p>
                     <div class="absolute bottom-2 mx-auto flex justify-center space-x-2">
-                        <a class=" edit-button absolute left-[10px] bottom-2 text-green-500 bg-gray-100 hover:bg-green-100 rounded-md px-4 pt-1 pb-2 flex items-center hover:cursor-pointer" onclick="openStaffEditPopup(<?php echo $id; ?>, '<?php echo $name; ?>', '<?php echo $role; ?>')">
+                        <a class=" edit-button absolute left-[10px] bottom-1 text-green-500 bg-gray-100 hover:bg-green-100 rounded-md px-4 pt-1 pb-2 flex items-center hover:cursor-pointer" onclick="openStaffEditPopup(<?php echo $id; ?>, '<?php echo $name; ?>', '<?php echo $role; ?>')">
                             <span class="material-symbols-outlined text-[14px] mt-1 border-1 rounded-full ">
                                 edit
                             </span>
                             <p class="ml-1 mt-1 text-[12px] text-green-500 hover:cursor-pointer">Edit</p>
                         </a>
-                        <a onclick="confirmDeleteStaff(<?php echo $id; ?>)" class=" absolute right-[-4px] bottom-2 text-red-500 bg-gray-100 hover:bg-red-100 rounded-md px-4 pt-1 pb-2 flex items-center hover:cursor-pointer">
+                        <a onclick="confirmDeleteStaff(<?php echo $id; ?>)" class=" absolute right-[-4px] bottom-1 text-red-500 bg-gray-100 hover:bg-red-100 rounded-md px-4 pt-1 pb-2 flex items-center hover:cursor-pointer">
                             <span class="material-symbols-outlined text-[14px] mt-1 border-1 rounded-full ">
                                 delete
                             </span>
@@ -2193,7 +2198,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
 
     <!-- Popup for Staff Edit -->
     <div id="staffEditPopup" class="modal hidden fixed h-full overflow-hidden bg-black bg-opacity-50 z-30 w-full">
-        <div class=" relative modal-content mx-auto mt-40">
+        <div class=" relative modal-content mx-auto mt-36">
             <button class="absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[8px] right-[500px] z-20 text-xl" onclick="closeStaffEditPopup()">×</button>
             <form action="edit_staff.php" method="POST" class=" bg-white relative mx-auto w-[500px] h-auto pt-12 pb-10 pl-10 pr-10 rounded-md">
                 <input type="hidden" name="editStaffId" id="editStaffId">
