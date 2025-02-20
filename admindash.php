@@ -417,7 +417,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
     <!-- Registration starts -->
     <div id="Registration" class="tabcontent overflow-y-scroll bg-gray-100">
         <form action="register_deleteall.php" method="POST">
-            <div class="sticky top-0 pt-[8px] pb-[7px] bg-gray-100 ml-[-18px] w-[1650px] pl-[12px] pr-2 z-10 flex justify-start item-start space-x-4">
+            <div class="sticky top-0 pt-[8px] pb-[7px] bg-gray-100 ml-[-18px] w-[1860px] pl-[12px] pr-2 z-10 flex justify-start item-start space-x-4">
                 <button type="submit" name="register_delete_all" class=" ml-2 flex items-center justify-center space-x-2 px-4 py-2 bg-red-500 hover:bg-red-600 rounded-md text-white" onclick="confirmDelete()">
                     <span class="material-symbols-outlined text-[20px] text-white mt-[1px]">
                         delete
@@ -2199,7 +2199,7 @@ if (!empty($gmails) && !empty($password) && !is_numeric($gmails)) {
     <!-- Popup for Staff Edit -->
     <div id="staffEditPopup" class="modal hidden fixed h-full overflow-hidden bg-black bg-opacity-50 z-30 w-full">
         <div class=" relative modal-content mx-auto mt-36">
-            <button class="absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[8px] right-[500px] z-20 text-xl" onclick="closeStaffEditPopup()">×</button>
+            <button class="absolute text-white bg-red-500 hover:bg-red-600 px-[10px] pb-1 rounded-md top-[8px] right-[520px] z-20 text-xl" onclick="closeStaffEditPopup()">×</button>
             <form action="edit_staff.php" method="POST" class=" bg-white relative mx-auto w-[500px] h-auto pt-12 pb-10 pl-10 pr-10 rounded-md">
                 <input type="hidden" name="editStaffId" id="editStaffId">
                 <h1 class="text-[24px] font-semibold text-center mt-[-10px] mb-4">Edit Staff Information</h1>

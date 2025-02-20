@@ -1803,7 +1803,7 @@ mysqli_error($con);
                 </div>
                 <div class=" ml-4">
                     <p class=" text-white text-[16px] font-semibold">Phone</p>
-                    <p class=" text-[#9ca3af] text-[14px]">+91 9090909090</p>
+                    <p class=" text-[#9ca3af] text-[14px]">+91 9345550559</p>
                 </div>
             </div>
             <div class=" flex pt-6">
